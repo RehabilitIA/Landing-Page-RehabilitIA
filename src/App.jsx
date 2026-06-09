@@ -6,6 +6,7 @@ import Therapies from "./components/Therapies";
 import Technology from "./components/Technology";
 import MobileApp from "./components/MobileApp";
 import WebPlatform from "./components/WebPlatform";
+import Results from "./components/Results";
 import Timeline from "./components/Timeline";
 import Team from "./components/Team";
 import Footer from "./components/Footer";
@@ -58,6 +59,9 @@ function App() {
 
       {/* --- PLATAFORMA WEB TERAPEUTAS --- */}
       <WebPlatform />
+
+      {/* --- RESULTADOS --- */}
+      <Results />
 
       {/* --- LÍNEA DE TIEMPO --- */}
       <Timeline />

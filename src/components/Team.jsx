@@ -3,6 +3,9 @@ import { useLanguage } from "../context/LanguageContext";
 import { translations } from "../translations/translations";
 import "../styles/Team.css";
 
+// NOTE: las fotos de los investigadores se sirven desde las URLs raw de GitHub.
+// Para actualizar una foto, reemplazar el archivo .jpg en src/assets/ y hacer commit
+// a la rama main del repo Tesis-Aphasia/Landing-Page-RehabilitIA.
 export default function Team() {
   const { language } = useLanguage();
   const t = translations[language];
@@ -10,7 +13,7 @@ export default function Team() {
   return (
     <section
       id="team"
-      className="team-wrapper w-full py-16 lg:py-28 relative overflow-hidden"
+      className="team-wrapper w-full py-10 lg:py-20 relative overflow-hidden"
     >
       <div className="team-bg-orb"></div>
 
@@ -34,9 +37,11 @@ export default function Team() {
             rel="noopener noreferrer"
             className="team-card-link"
           >
-            <div className="team-card soft-card hover-lift">
+            <div className="team-card soft-card">
               <div className="team-photo-wrapper">
                 <img
+                  loading="lazy"
+                  decoding="async"
                   className="team-photo"
                   src="https://raw.githubusercontent.com/Tesis-Aphasia/Landing-Page-RehabilitIA/refs/heads/main/src/assets/ruben_photo.jpg"
                   alt="Rubén Manrique"
@@ -55,9 +60,11 @@ export default function Team() {
             rel="noopener noreferrer"
             className="team-card-link"
           >
-            <div className="team-card soft-card hover-lift">
+            <div className="team-card soft-card">
               <div className="team-photo-wrapper">
                 <img
+                  loading="lazy"
+                  decoding="async"
                   className="team-photo"
                   src="https://raw.githubusercontent.com/Tesis-Aphasia/Landing-Page-RehabilitIA/refs/heads/main/src/assets/andrea_h_photo.jpg"
                   alt="Andrea Herrera"
@@ -76,9 +83,11 @@ export default function Team() {
             rel="noopener noreferrer"
             className="team-card-link"
           >
-            <div className="team-card soft-card hover-lift">
+            <div className="team-card soft-card">
               <div className="team-photo-wrapper">
                 <img
+                  loading="lazy"
+                  decoding="async"
                   className="team-photo"
                   src="https://raw.githubusercontent.com/Tesis-Aphasia/Landing-Page-RehabilitIA/refs/heads/main/src/assets/andrea_g_photo.jpg"
                   alt="Andrea Galindo"
@@ -97,9 +106,11 @@ export default function Team() {
             rel="noopener noreferrer"
             className="team-card-link"
           >
-            <div className="team-card soft-card hover-lift">
+            <div className="team-card soft-card">
               <div className="team-photo-wrapper">
                 <img
+                  loading="lazy"
+                  decoding="async"
                   className="team-photo"
                   src="https://raw.githubusercontent.com/Tesis-Aphasia/Landing-Page-RehabilitIA/refs/heads/main/src/assets/santiago_photo.jpg"
                   alt="Santiago Navarrete"

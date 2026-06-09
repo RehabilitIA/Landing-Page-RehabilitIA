@@ -11,7 +11,7 @@ export default function MobileApp() {
   return (
     <section
       id="mobile-app"
-      className="mobileapp-wrapper w-full py-16 lg:py-28 relative overflow-hidden"
+      className="mobileapp-wrapper w-full py-10 lg:py-20 relative overflow-hidden"
     >
       <div className="container mx-auto grid items-center gap-12 px-8 sm:px-12 md:px-16 lg:px-24 xl:px-32 lg:grid-cols-2">
 
@@ -52,6 +52,8 @@ export default function MobileApp() {
             className="mobileapp-image max-w-[260px] rounded-2xl shadow-soft-lg hover-lift"
             src={appMockup}
             alt="Mockup de la aplicación RehabilitIA"
+            loading="lazy"
+            decoding="async"
           />
         </div>
 

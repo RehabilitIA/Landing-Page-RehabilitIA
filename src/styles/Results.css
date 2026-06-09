@@ -1,0 +1,121 @@
+.results-wrapper {
+  position: relative;
+}
+
+.results-bg-orb {
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  background: radial-gradient(circle, rgba(228, 180, 206, 0.18), transparent);
+  border-radius: 50%;
+  top: 10%;
+  right: 5%;
+  filter: blur(100px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+@media (max-width: 640px) {
+  .results-bg-orb {
+    width: 240px;
+    height: 240px;
+    right: 0;
+  }
+}
+
+.results-title {
+  font-size: 2.25rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+@media (min-width: 768px) {
+  .results-title {
+    font-size: 2.75rem;
+  }
+}
+
+.results-subtitle {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--muted, #64748b);
+}
+
+.dark .results-subtitle {
+  color: #94a3b8;
+}
+
+/* Metric grid */
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+  max-width: 56rem;
+  margin: 0 auto;
+}
+
+@media (min-width: 1024px) {
+  .results-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.results-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.6rem;
+  padding: 2rem 1.25rem;
+  border: 1px solid rgba(63, 136, 171, 0.1);
+  height: 100%;
+  cursor: pointer;
+  font: inherit;
+  width: 100%;
+}
+
+/* Click hint */
+.results-hint {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-top: 0.4rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--accent, #3f88ab);
+  opacity: 0.75;
+  transition: opacity 0.25s ease;
+}
+
+.results-hint .material-symbols-outlined {
+  font-size: 0.95rem;
+}
+
+.results-card:hover .results-hint,
+.results-card:focus-visible .results-hint {
+  opacity: 1;
+}
+
+.results-value {
+  font-size: 2.4rem;
+  font-weight: 800;
+  line-height: 1.05;
+  padding-bottom: 0.12em;
+}
+
+.results-label {
+  font-size: 0.9rem;
+  line-height: 1.45;
+  color: var(--muted, #64748b);
+}
+
+.dark .results-label {
+  color: #94a3b8;
+}
+
+.results-note {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #94a3b8;
+}

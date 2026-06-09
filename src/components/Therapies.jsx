@@ -11,7 +11,7 @@ export default function Therapies() {
   const [srModalOpen, setSrModalOpen] = useState(false);
 
   return (
-    <section id="therapies" className="therapies-wrapper w-full py-20 lg:py-32 relative overflow-hidden">
+    <section id="therapies" className="therapies-wrapper w-full py-12 lg:py-20 relative overflow-hidden">
       {/* Decorative background orb */}
       <div className="therapies-orb"></div>
 

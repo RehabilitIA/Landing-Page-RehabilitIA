@@ -11,7 +11,7 @@ export default function WebPlatform() {
   return (
     <section
       id="web-platform"
-      className="webplatform-wrapper w-full py-16 lg:py-28"
+      className="webplatform-wrapper w-full py-10 lg:py-20"
     >
       <div className="container mx-auto grid items-center gap-12 px-8 sm:px-12 md:px-16 lg:px-24 xl:px-32 lg:grid-cols-2">
 

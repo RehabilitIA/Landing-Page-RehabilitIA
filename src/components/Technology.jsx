@@ -12,7 +12,7 @@ export default function Technology() {
   return (
     <section
       id="technology"
-      className="technology-wrapper w-full py-20 lg:py-32 relative overflow-hidden"
+      className="technology-wrapper w-full py-12 lg:py-20 relative overflow-hidden"
     >
       {/* Decorative background orb */}
       <div className="tech-orb"></div>

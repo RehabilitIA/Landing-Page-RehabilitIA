@@ -23,6 +23,12 @@ export default function Hero() {
           <p className="hero-subtitle max-w-3xl mx-auto">
             {t.heroSubtitle}
           </p>
+
+          <div className="hero-cta">
+            <a href="#what-is-aphasia" className="btn-soft btn-soft-primary">
+              {t.heroCtaPrimary}
+            </a>
+          </div>
         </div>
 
         {/* Hero image with organic background */}

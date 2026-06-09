@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { useLanguage } from "../context/LanguageContext";
+import LanguageDropdown from "./LanguageDropdown";
 import brainLogo from "../assets/brain_logo.png";
 import uandesLogo from "../assets/LogoUandes.png";
 import "../styles/Navbar.css";
 
 export default function Navbar() {
-  const { language, toggleLanguage } = useLanguage();
+  const { language } = useLanguage();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -27,7 +28,7 @@ export default function Navbar() {
         </div>
 
         {/* Desktop Navigation Links */}
-        <div className="navbar-links hidden md:flex items-center gap-8">
+        <div className="navbar-links items-center gap-8">
           <a href="#hero" className="navbar-link">
             {language === 'es' ? 'Inicio' : 'Home'}
           </a>
@@ -37,25 +38,21 @@ export default function Navbar() {
           <a href="#technology" className="navbar-link">
             {language === 'es' ? 'Tecnología' : 'Technology'}
           </a>
+          <a href="#results" className="navbar-link">
+            {language === 'es' ? 'Resultados' : 'Results'}
+          </a>
           <a href="#team" className="navbar-link">
             {language === 'es' ? 'Equipo' : 'Team'}
           </a>
 
-          {/* Language Toggle Button */}
-          <button
-            onClick={toggleLanguage}
-            className="language-toggle-btn"
-            aria-label="Toggle language"
-          >
-            <span className="material-symbols-outlined">translate</span>
-            <span className="language-text">{language === 'es' ? 'EN' : 'ES'}</span>
-          </button>
+          {/* Language Dropdown */}
+          <LanguageDropdown variant="desktop" />
         </div>
 
         {/* Mobile Menu Button */}
         <button
           onClick={toggleMenu}
-          className="md:hidden hamburger-btn"
+          className="hamburger-btn"
           aria-label="Toggle menu"
         >
           <div className={`hamburger-icon ${isMenuOpen ? 'open' : ''}`}>
@@ -67,7 +64,7 @@ export default function Navbar() {
       </div>
 
       {/* Mobile Menu */}
-      <div className={`mobile-menu md:hidden ${isMenuOpen ? 'open' : ''}`}>
+      <div className={`mobile-menu ${isMenuOpen ? 'open' : ''}`}>
         <div className="mobile-menu-content">
           <a href="#hero" className="mobile-menu-link" onClick={closeMenu}>
             {language === 'es' ? 'Inicio' : 'Home'}
@@ -78,22 +75,17 @@ export default function Navbar() {
           <a href="#technology" className="mobile-menu-link" onClick={closeMenu}>
             {language === 'es' ? 'Tecnología' : 'Technology'}
           </a>
+          <a href="#results" className="mobile-menu-link" onClick={closeMenu}>
+            {language === 'es' ? 'Resultados' : 'Results'}
+          </a>
           <a href="#team" className="mobile-menu-link" onClick={closeMenu}>
             {language === 'es' ? 'Equipo' : 'Team'}
           </a>
 
-          {/* Mobile Language Toggle Button */}
-          <button
-            onClick={() => {
-              toggleLanguage();
-              closeMenu();
-            }}
-            className="mobile-language-toggle-btn"
-            aria-label="Toggle language"
-          >
-            <span className="material-symbols-outlined">translate</span>
-            <span className="language-text">{language === 'es' ? 'EN' : 'ES'}</span>
-          </button>
+          {/* Mobile Language Dropdown */}
+          <div className="mobile-menu-language">
+            <LanguageDropdown variant="mobile" />
+          </div>
         </div>
       </div>
     </nav>

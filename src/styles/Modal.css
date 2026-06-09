@@ -28,15 +28,34 @@
 .modal-content {
   background: white;
   border-radius: 24px;
-  padding: 2.5rem;
   max-width: 700px;
-  width: 100%;
-  max-height: 85vh;
-  overflow-y: auto;
-  overflow-x: hidden;
+  width: min(700px, 92vw);
+  max-height: 88vh;
+  overflow: hidden;
   position: relative;
+  display: flex;
+  flex-direction: column;
   box-shadow: 0 20px 60px rgba(172, 211, 232, 0.3);
   animation: slideUp 0.3s ease;
+}
+
+.modal-content:focus {
+  outline: none;
+}
+
+/* Modal Header - fixed, doesn't scroll with body */
+.modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.75rem 2.5rem 1.25rem;
+  border-bottom: 1px solid rgba(172, 211, 232, 0.3);
+  flex-shrink: 0;
+}
+
+.dark .modal-header {
+  border-bottom-color: rgba(255, 255, 255, 0.1);
 }
 
 .dark .modal-content {
@@ -56,9 +75,7 @@
 
 /* Modal Close Button */
 .modal-close {
-  position: absolute;
-  top: 1.5rem;
-  right: 1.5rem;
+  flex-shrink: 0;
   background: rgba(172, 211, 232, 0.2);
   border: none;
   border-radius: 50%;
@@ -83,17 +100,20 @@
 
 /* Modal Title */
 .modal-title {
-  font-size: 1.75rem;
+  font-size: 1.6rem;
   font-weight: 700;
-  margin-bottom: 1.5rem;
-  padding-right: 2rem;
+  margin: 0;
+  line-height: 1.25;
 }
 
-/* Modal Body */
+/* Modal Body - scrollable region */
 .modal-body {
   color: #6b7280;
   font-size: 1.05rem;
   line-height: 1.8;
+  padding: 1.5rem 2.5rem 2rem;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .dark .modal-body {
@@ -132,21 +152,35 @@
   content: "→";
   position: absolute;
   left: 0;
-  color: #acd3e8;
+  color: var(--accent);
   font-weight: bold;
 }
 
-/* Scrollbar for modal */
-.modal-content::-webkit-scrollbar {
+/* Scrollbar for modal body */
+.modal-body::-webkit-scrollbar {
   width: 8px;
 }
 
-.modal-content::-webkit-scrollbar-track {
+.modal-body::-webkit-scrollbar-track {
   background: #f1f5f9;
   border-radius: 10px;
 }
 
-.modal-content::-webkit-scrollbar-thumb {
+.modal-body::-webkit-scrollbar-thumb {
   background: linear-gradient(135deg, #acd3e8, #e4b4ce);
   border-radius: 10px;
+}
+
+/* Mobile: tighter padding */
+@media (max-width: 640px) {
+  .modal-header {
+    padding: 1.25rem 1.25rem 1rem;
+  }
+  .modal-body {
+    padding: 1.25rem 1.25rem 1.5rem;
+    font-size: 1rem;
+  }
+  .modal-title {
+    font-size: 1.35rem;
+  }
 }

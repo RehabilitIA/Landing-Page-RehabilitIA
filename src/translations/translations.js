@@ -9,10 +9,18 @@ export const translations = {
     // Hero
     heroTitle: "RehabilitIA: Terapia de Lenguaje Asistida por IA",
     heroSubtitle: "Plataforma web y móvil para la rehabilitación personalizada de la afasia en pacientes hispanohablantes, combinando modelos de lenguaje avanzados y flujos agentivos para generar ejercicios adaptativos, culturalmente apropiados y basados en evidencia.",
+    heroCtaPrimary: "Conocer el proyecto",
+    heroCtaSecondary: "Probar la app",
+    navResults: "Resultados",
 
     // Aphasia Section
     aphasiaTitle: "¿Qué es la afasia?",
     aphasiaText: "La afasia es un trastorno adquirido del lenguaje causado por daño cerebral, generalmente después de un accidente cerebrovascular. Afecta la capacidad para hablar, comprender, leer y escribir, sin que necesariamente se alteren la memoria u otras funciones cognitivas.",
+    aphasiaStats: [
+      { value: "25–40%", label: "de los sobrevivientes de un ACV desarrollan afasia" },
+      { value: "16.946", label: "muertes por ACV en Colombia en 2023" },
+      { value: "1°", label: "sistema en español que combina agentes de IA y terapias basadas en evidencia" },
+    ],
 
     // Therapies
     therapiesTitle: "Terapias Basadas en Evidencia",
@@ -63,23 +71,84 @@ export const translations = {
     webText: "La plataforma web ofrece a los terapeutas un panel claro y completo para revisar el progreso de cada paciente, analizar su desempeño, ajustar ejercicios generados por IA y gestionar solicitudes de registro profesional. Permite integrar criterio clínico con herramientas inteligentes para una rehabilitación más precisa y personalizada.",
     webButton: "Probar Plataforma Web Aquí",
 
+    // Results
+    resultsTitle: "Resultados de la Validación",
+    resultsSubtitle: "Evaluación estructurada con profesionales de la salud certificados (fonoaudiología, neuropsicología y neurología).",
+    resultsNote: "Evaluación preliminar con 6 profesionales certificados · resultados publicados en el paper del proyecto.",
+    resultsHint: "Clic para más detalle",
+    resultsMetrics: [
+      {
+        value: "5.71/7",
+        label: "Usabilidad de la app móvil",
+        detail: "Promedio en una encuesta de usabilidad respondida por 6 profesionales de la salud, sobre una escala de 1 a 7. Todos los ítems quedaron por encima del punto medio, indicando una percepción consistentemente positiva en facilidad de uso, utilidad percibida y satisfacción general con la aplicación móvil del paciente."
+      },
+      {
+        value: "5.00/5",
+        label: "Potencial de integración clínica",
+        detail: "Acuerdo unánime (máximo posible, 5 de 5): todos los evaluadores coincidieron en que, bajo supervisión profesional, el sistema podría integrarse en la práctica clínica real y aumentar la intensidad terapéutica entre sesiones."
+      },
+      {
+        value: "4.50/5",
+        label: "Coherencia clínica de VNeST",
+        detail: "Las combinaciones sujeto–verbo–objeto generadas por la IA fueron calificadas como lingüísticamente coherentes y la progresión de ejercicios como clínicamente consistente. Respalda la eficacia del enfoque de generación estructurada por agentes para la terapia VNeST."
+      },
+      {
+        value: "4.75/5",
+        label: "Confianza como complemento supervisado",
+        detail: "Nivel de confianza de los profesionales en el sistema como complemento —no reemplazo— del criterio clínico, siempre bajo supervisión humana. Refuerza el diseño con terapeuta en el circuito (human-in-the-loop)."
+      },
+    ],
+
     // Timeline
     timelineTitle: "Línea de Tiempo del Proyecto",
     timelineSubtitle: "RehabilitIA inicia en 2025 como el primer sistema en español que combina agentes de IA y terapias basadas en evidencia para la rehabilitación del lenguaje.",
-    timeline2025Year: "2025",
-    timeline2025Items: [
-      "Formulación del problema y revisión de literatura.",
-      "Diseño de la arquitectura del sistema.",
-      "Integración inicial de agentes IA y modelos de lenguaje.",
-      "Desarrollo de la app móvil y la plataforma web.",
-      "Redacción de la tesis inicial."
-    ],
-    timeline2026Year: "2026 — En curso",
-    timeline2026Items: [
-      "Pruebas preliminares con terapeutas.",
-      "Extensión del sistema a nuevas terapias.",
-      "Publicación académica de resultados.",
-      "Preparación para despliegue a mayor escala."
+    timelineStatusDone: "Completado",
+    timelineStatusProgress: "En curso",
+    timelineStatusNext: "Próximo",
+    timelinePhases: [
+      {
+        year: "2025",
+        title: "Diseño y desarrollo",
+        status: "done",
+        items: [
+          "Formulación del problema y revisión de literatura.",
+          "Diseño de la arquitectura del sistema.",
+          "Integración de agentes de IA y modelos de lenguaje (GPT-4.1 + LangGraph).",
+          "Desarrollo de la app móvil (Flutter) y la plataforma web (React)."
+        ]
+      },
+      {
+        year: "2025 · S2",
+        title: "Validación con expertos",
+        status: "done",
+        items: [
+          "Evaluación con 6 profesionales certificados (fonoaudiología, neuropsicología, neurología).",
+          "Usabilidad de la app móvil: 5.71/7.",
+          "Potencial de integración clínica: 5.00/5 (unánime).",
+          "Coherencia clínica de VNeST: 4.50/5."
+        ]
+      },
+      {
+        year: "2026",
+        title: "Piloto y publicación",
+        status: "progress",
+        items: [
+          "Pruebas con pacientes reales con afasia.",
+          "Publicación académica de resultados.",
+          "Extensión del sistema a nuevas terapias."
+        ]
+      },
+      {
+        year: "Futuro",
+        title: "Despliegue a escala",
+        status: "next",
+        items: [
+          "Interacción multimodal (texto a voz y reconocimiento de voz).",
+          "Mejora de la calibración de dificultad.",
+          "Validación ética, de privacidad y seguridad para despliegue.",
+          "Despliegue a mayor escala."
+        ]
+      }
     ],
 
     // Team
@@ -96,6 +165,12 @@ export const translations = {
     teamSantiagoRole: "Researcher",
 
     // Footer
+    footerTagline: "Terapia de lenguaje para la afasia, personalizada con IA y basada en evidencia.",
+    footerNavTitle: "Navegación",
+    footerResourcesTitle: "Recursos",
+    footerLegalTitle: "Universidad",
+    footerAppLink: "App móvil",
+    footerWebLink: "Plataforma web",
     footerRights: "Todos los derechos reservados.",
     footerUniversity: "Universidad de los Andes | Vigilada Mineducación",
     footerRecognition: "Reconocimiento como Universidad: Decreto 1297 del 30 de mayo de 1964.",
@@ -113,10 +188,18 @@ export const translations = {
     // Hero
     heroTitle: "RehabilitIA: AI-Assisted Language Therapy",
     heroSubtitle: "Web and mobile platform for personalized aphasia rehabilitation in Spanish-speaking patients, combining advanced language models and agentic flows to generate adaptive, culturally appropriate, and evidence-based exercises.",
+    heroCtaPrimary: "Explore the project",
+    heroCtaSecondary: "Try the app",
+    navResults: "Results",
 
     // Aphasia Section
     aphasiaTitle: "What is Aphasia?",
     aphasiaText: "Aphasia is an acquired language disorder caused by brain damage, usually after a stroke. It affects the ability to speak, understand, read, and write, without necessarily altering memory or other cognitive functions.",
+    aphasiaStats: [
+      { value: "25–40%", label: "of stroke survivors develop aphasia" },
+      { value: "16,946", label: "stroke deaths in Colombia in 2023" },
+      { value: "1st", label: "Spanish-language system combining AI agents and evidence-based therapies" },
+    ],
 
     // Therapies
     therapiesTitle: "Evidence-Based Therapies",
@@ -167,23 +250,84 @@ export const translations = {
     webText: "The web platform provides therapists with a clear and comprehensive dashboard to review each patient's progress, analyze their performance, adjust AI-generated exercises, and manage professional registration requests. It allows integrating clinical judgment with intelligent tools for more precise and personalized rehabilitation.",
     webButton: "Try Web Platform Here",
 
+    // Results
+    resultsTitle: "Validation Results",
+    resultsSubtitle: "Structured evaluation with certified healthcare professionals (speech-language pathology, neuropsychology, and neurology).",
+    resultsNote: "Preliminary evaluation with 6 certified professionals · results published in the project paper.",
+    resultsHint: "Click for more detail",
+    resultsMetrics: [
+      {
+        value: "5.71/7",
+        label: "Mobile app usability",
+        detail: "Average score on a usability survey completed by 6 healthcare professionals, on a 1–7 scale. All items scored above the midpoint, indicating consistently positive perceptions of ease of use, perceived usefulness, and overall satisfaction with the patient mobile app."
+      },
+      {
+        value: "5.00/5",
+        label: "Clinical integration potential",
+        detail: "Unanimous agreement (maximum possible, 5 of 5): all evaluators agreed that, under professional supervision, the system could be integrated into real clinical practice and increase therapeutic intensity between sessions."
+      },
+      {
+        value: "4.50/5",
+        label: "VNeST clinical coherence",
+        detail: "AI-generated subject–verb–object combinations were rated as linguistically coherent and the exercise progression as clinically consistent. Supports the effectiveness of the structured, agent-based generation approach for VNeST therapy."
+      },
+      {
+        value: "4.75/5",
+        label: "Trust as a supervised complement",
+        detail: "Professionals' level of trust in the system as a complement —not a replacement— for clinical judgment, always under human supervision. Reinforces the human-in-the-loop design."
+      },
+    ],
+
     // Timeline
     timelineTitle: "Project Timeline",
     timelineSubtitle: "RehabilitIA begins in 2025 as the first Spanish-language system combining AI agents and evidence-based therapies for language rehabilitation.",
-    timeline2025Year: "2025",
-    timeline2025Items: [
-      "Problem formulation and literature review.",
-      "System architecture design.",
-      "Initial integration of AI agents and language models.",
-      "Development of mobile app and web platform.",
-      "Thesis initial writing."
-    ],
-    timeline2026Year: "2026 — Ongoing",
-    timeline2026Items: [
-      "Preliminary testing with therapists.",
-      "Extension of the system to new therapies.",
-      "Academic publication of results.",
-      "Preparation for larger-scale deployment."
+    timelineStatusDone: "Completed",
+    timelineStatusProgress: "In progress",
+    timelineStatusNext: "Upcoming",
+    timelinePhases: [
+      {
+        year: "2025",
+        title: "Design & development",
+        status: "done",
+        items: [
+          "Problem formulation and literature review.",
+          "System architecture design.",
+          "Integration of AI agents and language models (GPT-4.1 + LangGraph).",
+          "Development of the mobile app (Flutter) and web platform (React)."
+        ]
+      },
+      {
+        year: "2025 · H2",
+        title: "Expert validation",
+        status: "done",
+        items: [
+          "Evaluation with 6 certified professionals (speech-language pathology, neuropsychology, neurology).",
+          "Mobile app usability: 5.71/7.",
+          "Clinical integration potential: 5.00/5 (unanimous).",
+          "VNeST clinical coherence: 4.50/5."
+        ]
+      },
+      {
+        year: "2026",
+        title: "Pilot & publication",
+        status: "progress",
+        items: [
+          "Testing with real aphasia patients.",
+          "Academic publication of results.",
+          "Extension of the system to new therapies."
+        ]
+      },
+      {
+        year: "Future",
+        title: "Scaling deployment",
+        status: "next",
+        items: [
+          "Multimodal interaction (text-to-speech and speech recognition).",
+          "Improved difficulty calibration.",
+          "Ethical, privacy and security validation for deployment.",
+          "Larger-scale deployment."
+        ]
+      }
     ],
 
     // Team
@@ -200,6 +344,12 @@ export const translations = {
     teamSantiagoRole: "Researcher",
 
     // Footer
+    footerTagline: "AI-powered, evidence-based language therapy for aphasia, personalized for each patient.",
+    footerNavTitle: "Navigation",
+    footerResourcesTitle: "Resources",
+    footerLegalTitle: "University",
+    footerAppLink: "Mobile app",
+    footerWebLink: "Web platform",
     footerRights: "All rights reserved.",
     footerUniversity: "Universidad de los Andes | Monitored by Ministry of Education",
     footerRecognition: "Recognition as University: Decree 1297 of May 30, 1964.",

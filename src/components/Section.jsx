@@ -10,7 +10,7 @@ export default function Section({ id, img, imgAlt, reverse, background }) {
   return (
     <section
       id={id}
-      className={`section-wrapper w-full py-20 lg:py-32 relative overflow-hidden ${background || ""}`}
+      className={`section-wrapper w-full py-12 lg:py-20 relative overflow-hidden ${background || ""}`}
     >
       {/* Organic blob background */}
       <div className={`section-blob ${reverse ? 'section-blob-left' : 'section-blob-right'}`}></div>
@@ -24,6 +24,17 @@ export default function Section({ id, img, imgAlt, reverse, background }) {
           <div className={`flex flex-col justify-center space-y-6 ${reverse ? "lg:col-start-2 fade-in-right" : "fade-in-left"}`}>
             <h2 className="section-title gradient-text">{t.aphasiaTitle}</h2>
             <p className="section-text max-w-xl">{t.aphasiaText}</p>
+
+            {t.aphasiaStats && (
+              <div className="section-stats">
+                {t.aphasiaStats.map((stat, i) => (
+                  <div className="section-stat" key={i}>
+                    <span className="section-stat-value gradient-text">{stat.value}</span>
+                    <span className="section-stat-label">{stat.label}</span>
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
 
           {/* IMAGE */}
@@ -32,6 +43,8 @@ export default function Section({ id, img, imgAlt, reverse, background }) {
               className="section-image w-full h-auto rounded-3xl shadow-soft-lg hover-lift"
               src={img}
               alt={imgAlt}
+              loading="lazy"
+              decoding="async"
             />
           </div>
         </div>

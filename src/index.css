@@ -8,12 +8,45 @@
   --color-soft-pink: #e4b4ce;
   --color-soft-sky: #bdd6ec;
   --color-cream: #faf8f3;
+
+  /* Unified accent palette (single identity) */
+  --accent: #3f88ab;        /* darkened soft-blue, readable on white */
+  --accent-soft: #acd3e8;
+  --accent-coral: #e4888b;
+  --accent-pink: #e4b4ce;
+  --ink: #1e293b;
+  --muted: #64748b;
 }
 
 /* Smooth Scroll */
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
+}
+
+/* Accessibility: respect reduced-motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+  .scroll-reveal,
+  .fade-in-left,
+  .fade-in-right,
+  .scale-in {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* Offset anchor targets so the fixed navbar doesn't cover section titles */
+section[id],
+[id="hero"],
+[id="what-is-aphasia"],
+[id="technology"],
+[id="team"] {
+  scroll-margin-top: 90px;
 }
 
 /* Body Base Styles */
@@ -59,6 +92,9 @@ body.dark {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   font-weight: 700;
+  /* Evita que background-clip:text recorte descendentes (g, p, j) y tildes */
+  line-height: 1.25;
+  padding-bottom: 0.12em;
 }
 
 /* Organic Shapes */
