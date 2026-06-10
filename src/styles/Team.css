@@ -147,11 +147,14 @@
 
 /* Affiliation */
 .team-affiliation {
-  font-size: 0.875rem;
+  font-size: 0.78rem;
+  line-height: 1.4;
   color: #64748b;
   margin-top: auto;
   padding-top: 0.5rem;
+  overflow-wrap: anywhere;
   word-break: break-word;
+  max-width: 100%;
 }
 
 .dark .team-affiliation {
