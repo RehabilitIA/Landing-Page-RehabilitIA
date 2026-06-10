@@ -32,7 +32,7 @@ export default function WebPlatform() {
           </p>
 
           <a
-            href="https://afasia.virtual.uniandes.edu.co/web"
+            href="https://afasia.virtual.uniandes.edu.co/web/"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center px-8 py-3 text-base font-semibold rounded-full transition-all duration-300 w-fit"

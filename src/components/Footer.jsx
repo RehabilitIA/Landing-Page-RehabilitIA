@@ -50,7 +50,7 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="https://afasia.virtual.uniandes.edu.co/web" target="_blank" rel="noopener noreferrer" className="footer-link">
+                <a href="https://afasia.virtual.uniandes.edu.co/web/" target="_blank" rel="noopener noreferrer" className="footer-link">
                   {t.footerWebLink}
                 </a>
               </li>
