@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { useLanguage } from "../context/LanguageContext";
 import LanguageDropdown from "./LanguageDropdown";
 import brainLogo from "../assets/brain_logo.png";
@@ -8,6 +8,7 @@ import "../styles/Navbar.css";
 export default function Navbar() {
   const { language } = useLanguage();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navRef = useRef(null);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -17,8 +18,24 @@ export default function Navbar() {
     setIsMenuOpen(false);
   };
 
+  // Close mobile menu on click/touch outside the navbar
+  useEffect(() => {
+    if (!isMenuOpen) return;
+    const handleOutside = (e) => {
+      if (navRef.current && !navRef.current.contains(e.target)) {
+        setIsMenuOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleOutside);
+    document.addEventListener("touchstart", handleOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleOutside);
+      document.removeEventListener("touchstart", handleOutside);
+    };
+  }, [isMenuOpen]);
+
   return (
-    <nav className="navbar glass fixed top-0 left-0 right-0 z-50">
+    <nav ref={navRef} className="navbar glass fixed top-0 left-0 right-0 z-50">
       <div className="container mx-auto px-8 sm:px-12 md:px-16 lg:px-24 xl:px-32 flex items-center justify-between py-4">
         {/* Logo */}
         <div className="navbar-logo flex items-center gap-6">

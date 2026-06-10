@@ -104,7 +104,8 @@
 }
 
 .mobile-menu.open {
-  max-height: 400px;
+  max-height: 600px;
+  overflow-y: auto;
   box-shadow: 0 8px 24px rgba(172, 211, 232, 0.15);
 }
 
@@ -243,8 +244,17 @@
   font-size: 1rem;
 }
 
+/* Mobile: render list inline (not absolute) so it isn't clipped by the menu */
 .language-dropdown.mobile .language-dropdown-menu {
-  left: 0;
-  right: 0;
+  position: static;
   width: 100%;
+  margin-top: 0.5rem;
+  box-shadow: none;
+  border: 1px solid rgba(172, 211, 232, 0.4);
+  animation: none;
+}
+
+.language-dropdown.mobile .language-dropdown-item {
+  padding: 0.8rem 0.9rem;
+  font-size: 1rem;
 }
